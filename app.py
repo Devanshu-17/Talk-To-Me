@@ -14,8 +14,8 @@ def answer_question(
     prompt, temperature=0.1, top_p=0.75, top_k=40, num_beams=2, **kwargs
 ):
     inputs = tokenizer(prompt, return_tensors="pt")
-    input_ids = inputs["input_ids"].to("cpu")
-    attention_mask = inputs["attention_mask"].to("cpu")
+    input_ids = inputs["input_ids"].to("cuda")
+    attention_mask = inputs["attention_mask"].to("cuda")
     generation_config = GenerationConfig(
         temperature=temperature, top_p=top_p, top_k=top_k, num_beams=num_beams, **kwargs
     )
