@@ -1,4 +1,7 @@
 streamlit
+markdown
+streamlit-chat
+streamlit-extras
 transformers
 torch
 sacremoses
